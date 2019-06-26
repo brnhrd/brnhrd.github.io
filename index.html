@@ -3,11 +3,13 @@
 <head><meta charset='UTF-8'><meta name="robots" content="index">
 
 <link rel='stylesheet' href='./css/normalize.min.css'><link rel='stylesheet' href='./css/all.min.css'>
-<style>body {
+<style>
+body {
   background-color: #263238;
   display: grid;
   place-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 .logo {
   text-align: center;
@@ -17,32 +19,7 @@
   width: 50%;
 }
 .center {
-  margin: auto;
- 
-}
-.icon-row {
-  margin: auto;
-  text-align: center;
-}
-.icon-row a:hover {
-	color: #990000;
-	border: .125rem solid #990000;
-	background-color: white;
-}
-.icon {
-    color: white;
-    display: inline-block;
-    padding: .938rem;
-    margin: .125rem;
-    border-radius: 50%;
-    border: .125rem solid #fff;
-    line-height: 0;
-    transition: all .7s;
-    font-size: 2em;
-}
-.icon i {
-  margin-top: 0.128em;
-  height: 1.128em;
+  margin: auto; 
 }
 .footer {
 	position:absolute;
@@ -52,34 +29,176 @@
 	height:2em;
 	color: white;
 }
+#menu {
+	margin: auto;
+    height: auto;	
+}
+#menu ul {
+    margin: auto;
+    padding: 0px;
+    list-style-type: none;
+}
+#menu ul li {
+    float: left;
+	padding: 0.12em;
+   
+}
+#menu ul li a {
+    line-height: 0;
+	padding: .938rem;
+	margin: .125rem;
+    text-decoration: none;
+    text-align: center;
+	font-size: 2em;
+    display: inline-block;
+    border-radius: 50%;
+    border: .125rem solid #fff;
+    color: white;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+#menu ul li a:hover {
+    color: #990000;
+	border: .125rem solid #990000;
+	background-color: white;
+}
+#menu ul li i {
+  margin-top: 0.128em;
+  height: 1.128em;
+}
+#menu ul li ul {
+    position: absolute;
+    -webkit-transition: max-height 1s linear 0s;
+    -moz-transition: max-height 1s linear 0s;
+    -ms-transition: max-height 1s linear 0s;
+    -o-transition: max-height 1s linear 0s;
+    transition: max-height 1s linear 0s;
+    max-height: 0px;
+    overflow:hidden;
+}
+#menu ul li ul li  {
+	float: none;
+}
+
+
+#menu ul li ul li a {
+	font-size: 1em;
+	text-align: left;
+	border-radius: 0;
+}
+
+
+
+#menu ul li:hover ul {
+    max-height: 500px;
+    -webkit-transition: max-height 1s linear 0s;
+    -moz-transition: max-height 1s linear 0s;
+    -ms-transition: max-height 1s linear 0s;
+    -o-transition: max-height 1s linear 0s;
+    transition: max-height 1s linear 0s;
+}
+
+
+
+.tv {
+  position: absolute;
+ 
+  transform:scale(1.1);
+  
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  
+  .screen {
+    position: absolute;
+	
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    margin: auto;
+
+    opacity: 0;
+    transition: opacity .5s;
+	
+    &.active {
+      opacity: 1;
+    }
+  }
+}
 </style>
 <title>Bernhard Gründling - Home</title>
 <meta name="description" content="Bernhard's online home."/>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 </head>
+
 <body>
+
+
+<div class="tv">
+		  <div class="screen mute" id="tv"></div>
+</div>	
+
+	
 <div class="center">
+
   <div class="logo">
     <img src="./img/logo.png" alt="Bernhard Gründling"/>
   </div>
   <br>
-  <div class="icon-row">
-    <a class="icon" href="mailto:&#119;&#101;&#098;&#064;&#098;&#101;&#114;&#110;&#104;&#097;&#114;&#100;&#103;&#114;&#117;&#101;&#110;&#100;&#108;&#105;&#110;&#103;&#046;&#099;&#111;&#109;" title="Send me an email">
-        <i class="fas fa-envelope fa-fw" aria-hidden="true"></i> 
-    </a>
-    <a class="icon" href="https://twitter.com/divercinety"  title="My Tweets">
-		<i class="fab fa-twitter fa-fw" aria-hidden="true"></i>
-    </a>
-    <a class="icon" href="https://instagram.com/divercinety"  title="My visual portfolio">
-		<i class="fab fa-instagram fa-fw" aria-hidden="true"></i>
-    </a>
-    <a class="icon" href="https://www.youtube.com/channel/UCdx9k4MsmV6A2-H00G2sB6g"  title="My video productions">
-		<i class="fab fa-youtube fa-fw" aria-hidden="true"></i>
-    </a>
-    <a class="icon" href="https://play.google.com/store/apps/developer?id=Bernhard+Gr%C3%BCndling"  title="Try my Apps">
-		<i class="fab fa-google-play fa-fw" aria-hidden="true"></i>
-    </a>
+  <div id="menu">
+    	<ul>
+        	<li>
+				<a target="_blank" rel="noopener noreferrer" href="mailto:&#119;&#101;&#098;&#064;&#098;&#101;&#114;&#110;&#104;&#097;&#114;&#100;&#103;&#114;&#117;&#101;&#110;&#100;&#108;&#105;&#110;&#103;&#046;&#099;&#111;&#109;" title="Send me an email">
+					<i class="fas fa-envelope fa-fw" aria-hidden="true"></i> 
+				</a>
+				<ul class="child">
+					<li><a>OpenPGP key fingerprint:	47BC 8CF9 1FC3 A194 EFB4 5E0A 3B7F 6665 C937 E940</a></li>
+				</ul>
+			</li>
+			
+            <li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/divercinety"  title="My Tweets">
+				<i class="fab fa-twitter fa-fw" aria-hidden="true"></i>
+			</a>            	
+            </li>
+			
+			<li><a target="_blank" rel="noopener noreferrer" href="https://instagram.com/divercinety"  title="My visual portfolio">
+				<i class="fab fa-instagram fa-fw" aria-hidden="true"></i>
+			</a>            	
+            </li>
+			
+			<li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCdx9k4MsmV6A2-H00G2sB6g"  title="My video productions">
+				<i class="fab fa-youtube fa-fw" aria-hidden="true"></i>
+			</a>            	
+            </li>
+			
+			<li><a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/developer?id=Bernhard+Gr%C3%BCndling"  title="Try my Apps">
+				<i class="fab fa-google-play fa-fw" aria-hidden="true"></i>
+			</a>            	
+            </li>
+			
+            
+        </ul>
+		
+    </div>
+
+	
   </div>
-</div>
-<div class="footer">Bernhard Gründling • OpenPGP key fingerprint: 47BC 8CF9 1FC3 A194 EFB4 5E0A 3B7F 6665 C937 E940 • Enns</div>
+  
+	
+<div class="footer">Bernhard Gründling • Enns</div>
+<script language="JavaScript" type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./js/ytbgplay.js"></script>
+
+
+
 </body></html>
