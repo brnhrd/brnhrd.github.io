@@ -22,11 +22,13 @@ function onYouTubePlayerAPIReady(){
 function onPlayerReady(){
   tv.loadVideoById(vid[currVid]);
   tv.mute();
+  
 }
 
 function onPlayerStateChange(e) {
-  if (e.data === 1){
+   if (e.data === 1){
     $('#tv').addClass('active');
+	
    // $('.hi em:nth-of-type(2)').html(currVid + 1);
   } else if (e.data === 0){
     $('#tv').removeClass('active');
@@ -64,6 +66,10 @@ function vidRescale(){
 
 $(window).on('load resize', function(){
   vidRescale();
+  setTimeout(function(){
+   $('.tv').css({'visibility': 'visible'}); 
+}, 500);
+  
 });
 
 $('.hi span:first-of-type').on('click', function(){

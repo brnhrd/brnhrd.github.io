@@ -4,14 +4,16 @@
 
 <link rel='stylesheet' href='./css/normalize.min.css'><link rel='stylesheet' href='./css/all.min.css'>
 <style>
-
+html {
+overflow: hidden;
+}
 body {
   background-color: #263238;
   display: grid;
   place-items: center;
   height: 100vh;
   overflow: hidden;
-  
+  position: relative
 }
 .logo {
   text-align: center;
@@ -136,6 +138,7 @@ body {
 }
 
 .tv {
+  visibility: hidden;
   position: absolute;
   left: 0;
   transform:scale(1.3);
