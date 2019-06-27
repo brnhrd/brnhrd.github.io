@@ -55,7 +55,7 @@ function vidRescale(){
     $('.tv .screen').css({'left': '0px'});
   } else {
     tv.setSize(h/9*16, h);
-	var moveLeft = ((h/9*16)/2)-(w/2)+20;
+	var moveLeft = (((h/9*16)/2)-(w/2))*1.15;
 	$('.tv').css({'left': -moveLeft});
 	$('.tv').css({'width': w+moveLeft});
 	$('.screen').css({'left': -moveLeft});
