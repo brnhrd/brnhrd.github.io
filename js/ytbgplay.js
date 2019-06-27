@@ -51,11 +51,14 @@ function vidRescale(){
     h = $(window).height();
 
   if (w/h > 16/9){
-    tv.setSize(w, w/16*9);
+	tv.setSize(w, w/16*9);
     $('.tv .screen').css({'left': '0px'});
   } else {
     tv.setSize(h/9*16, h);
-    $('.tv .screen').css({'left': -($('.tv .screen').outerWidth()-w)/2});
+	var moveLeft = ((h/9*16)/2)-(w/2)+20;
+	$('.tv').css({'left': -moveLeft});
+	$('.tv').css({'width': w+moveLeft});
+	$('.screen').css({'left': -moveLeft});
   }
 }
 
