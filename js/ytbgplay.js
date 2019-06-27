@@ -67,7 +67,7 @@ function vidRescale(){
 $(window).on('load resize', function(){
   vidRescale();
   setTimeout(function(){
-   $('.tv').css({'visibility': 'visible'}); 
+   $('.tv').css({'opacity': 1}); 
 }, 500);
   
 });
