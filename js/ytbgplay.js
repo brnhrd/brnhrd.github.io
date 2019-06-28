@@ -70,8 +70,28 @@ function vidRescale(){
 $(window).on('load resize', function(){
   vidRescale();
   setTimeout(function(){
-   $('.tv').css({'opacity': 1}); 
-}, 500);
+   if (tv.getDuration() > 0) {
+	   $('.tv').fadeTo(500,1);
+   } else {
+	   setTimeout(function(){
+			if (tv.getDuration() > 0) {
+				$('.tv').fadeTo(500,1);
+			} else {
+				setTimeout(function(){
+					if (tv.getDuration() > 0) {
+						$('.tv').fadeTo(500,1);
+						
+					} else {
+						tv.stopVideo();
+					}
+				}, 1500);
+			}
+		}, 1000);
+   }		
+  }, 1000);
+  
+	
+   
   
 });
 
