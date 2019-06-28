@@ -89,3 +89,23 @@ $('.hi span:last-of-type').on('click', function(){
   $('.hi em:nth-of-type(2)').html('~');
   tv.pauseVideo();
 });
+
+
+$('.collapsible').on('click', function(){
+	if (tv.getPlayerState() !== 2 && tv.getDuration() >= 1 && !$('.collapsible').hasClass('active')) {
+		$('#gradient').fadeIn();
+		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.6)"}); 
+		setTimeout(function(){
+			tv.pauseVideo();
+		}, 300);
+	} else {	
+		tv.playVideo();
+		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.4)"}); 
+		setTimeout(function(){
+			$('#gradient').fadeOut();
+		}, 200);
+		
+	
+  }
+
+});

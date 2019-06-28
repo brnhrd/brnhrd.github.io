@@ -29,7 +29,7 @@ body {
   margin:auto;
   padding: 20px;
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
 .bigtext {
@@ -212,6 +212,21 @@ body {
   }
 }
 
+#gradient {
+    position:absolute;
+    z-index:0;
+    right:0; bottom:0; left:0;
+    height:400px;
+	display: none;
+    background: -moz-linear-gradient(top,  rgba(38,50,56,0) 0%, rgba(38,50,56,1) 60%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(38,50,56,0)), color-stop(60%,rgba(38,50,56,1)));
+    background: -webkit-linear-gradient(top,  rgba(38,50,56,0) 0%,rgba(38,50,56,1) 60%);
+    background: -o-linear-gradient(top,  rgba(38,50,56,0) 0%,rgba(38,50,56,1) 60%);
+    background: -ms-linear-gradient(top,  rgba(38,50,56,0) 0%,rgba(38,50,56,1) 60%);
+    background: linear-gradient(to bottom,  rgba(38,50,56,0) 0%,rgba(38,50,56,1) 60%);
+
+}
+
 </style>
 <title>Bernhard Gründling - Home</title>
 <meta name="description" content="Bernhard's online home."/>
@@ -224,9 +239,9 @@ body {
 
 <div class="tv">
 		  <div class="screen mute" id="tv"></div>
+		  <div id="gradient"></div>
 </div>	
 
-	
 <div class="center">
 
   <div class="logo">
@@ -244,7 +259,7 @@ body {
 			Currently: <br>
 			Master Study in Computer Science at JKU Linz. <br>
 			Passion for filmmaking and cinematography. <br>
-			Volunteering Emergency Medical Technician at the Red Cross.
+			Volunteer Emergency Medical Technician at the Red Cross.
 		</div>
 		<br>
 	</div>
