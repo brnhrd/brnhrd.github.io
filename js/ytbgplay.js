@@ -112,14 +112,14 @@ $('.hi span:last-of-type').on('click', function(){
 
 
 $('.collapsible').on('click', function(){
-	if (tv.getPlayerState() !== 2 && tv.getDuration() >= 1 && !$('.collapsible').hasClass('active')) {
+	if (tv.getPlayerState() !== 2 && tv.getCurrentTime() >= 1 && !$('.collapsible').hasClass('active')) {
 		$('#gradient').fadeIn();
 		$('.tv').fadeTo(500,0.5);
 		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.5)"}); 
 		setTimeout(function(){
 			tv.pauseVideo();
 		}, 300);
-	} else {
+	} else if  (tv.getCurrentTime() > 0) {
 		tv.playVideo();
 		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.4)"}); 
 		setTimeout(function(){
