@@ -22,9 +22,7 @@ function onYouTubePlayerAPIReady(){
 function onPlayerReady(){
   tv.loadVideoById(vid[currVid]);
   tv.mute();
-  if (tv.getPlayerState() !== -1) {
-	$('.tv').css({'visibility': 'hidden'}); 
-  }
+  
  
 }
 
@@ -83,6 +81,7 @@ $(window).on('load resize', function(){
 						
 					} else {
 						tv.stopVideo();
+						$('.tv').css({'visibility': 'hidden'}); 
 					}
 				}, 1500);
 			}
