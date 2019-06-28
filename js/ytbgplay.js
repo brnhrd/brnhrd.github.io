@@ -22,7 +22,10 @@ function onYouTubePlayerAPIReady(){
 function onPlayerReady(){
   tv.loadVideoById(vid[currVid]);
   tv.mute();
-  
+  if (tv.getPlayerState() !== -1) {
+	$('.tv').css({'opacity': 0}); 
+  }
+ 
 }
 
 function onPlayerStateChange(e) {
