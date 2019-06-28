@@ -80,8 +80,9 @@ $(window).on('load resize', function(){
 						$('.tv').fadeTo(500,1);
 						
 					} else {
-						tv.stopVideo();
 						$('.tv').css({'visibility': 'hidden'}); 
+						tv.stopVideo();
+						tv.destroy();
 					}
 				}, 1500);
 			}
@@ -118,7 +119,7 @@ $('.collapsible').on('click', function(){
 		setTimeout(function(){
 			tv.pauseVideo();
 		}, 300);
-	} else {	
+	} else {
 		tv.playVideo();
 		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.4)"}); 
 		setTimeout(function(){
