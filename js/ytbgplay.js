@@ -94,6 +94,7 @@ $('.hi span:last-of-type').on('click', function(){
 $('.collapsible').on('click', function(){
 	if (tv.getPlayerState() !== 2 && tv.getDuration() >= 1 && !$('.collapsible').hasClass('active')) {
 		$('#gradient').fadeIn();
+		$('.tv').fadeTo(500,0.5);
 		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.6)"}); 
 		setTimeout(function(){
 			tv.pauseVideo();
@@ -102,6 +103,7 @@ $('.collapsible').on('click', function(){
 		tv.playVideo();
 		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.4)"}); 
 		setTimeout(function(){
+			$('.tv').fadeTo(500,1);
 			$('#gradient').fadeOut();
 		}, 200);
 		
