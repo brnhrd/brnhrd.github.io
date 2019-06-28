@@ -115,7 +115,7 @@ $('.collapsible').on('click', function(){
 	if (tv.getPlayerState() !== 2 && tv.getDuration() >= 1 && !$('.collapsible').hasClass('active')) {
 		$('#gradient').fadeIn();
 		$('.tv').fadeTo(500,0.5);
-		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.6)"}); 
+		$('.center').css({backgroundColor: "rgba(0, 0, 0, 0.5)"}); 
 		setTimeout(function(){
 			tv.pauseVideo();
 		}, 300);
