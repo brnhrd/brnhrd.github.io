@@ -68,15 +68,15 @@ function vidRescale(){
 $(window).on('load resize', function(){
   vidRescale();
   setTimeout(function(){
-   if (tv.getCurrentTime() > 0) {
+   if (tv.getCurrentTime() > 0 && !$('.collapsible').hasClass('active')) {
 	   $('.tv').fadeTo(500,1);
    } else {
 	   setTimeout(function(){
-			if (tv.getCurrentTime() > 0) {
+			if (tv.getCurrentTime() > 0 && !$('.collapsible').hasClass('active')) {
 				$('.tv').fadeTo(500,1);
 			} else {
 				setTimeout(function(){
-					if (tv.getCurrentTime() > 0) {
+					if (tv.getCurrentTime() > 0 && !$('.collapsible').hasClass('active')) {
 						$('.tv').fadeTo(500,1);
 						
 					} else {
