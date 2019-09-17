@@ -79,7 +79,7 @@ $(window).on('load resize', function(){
 					if (tv.getCurrentTime() > 0 && !$('.collapsible').hasClass('active')) {
 						$('.tv').fadeTo(500,1);
 						
-					} else {
+					} else if (!$('.collapsible').hasClass('active')) {
 						$('.tv').css({'visibility': 'hidden'}); 
 						tv.stopVideo();
 						tv.destroy();
