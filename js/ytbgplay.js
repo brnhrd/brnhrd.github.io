@@ -88,7 +88,7 @@ $(window).on('load resize', function(){
 			}
 		}, 1000);
    }		
-  }, 1000);
+  }, 500);
   
 	
    
