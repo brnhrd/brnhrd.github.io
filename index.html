@@ -44,11 +44,17 @@ body {
 	font-size: 1em;
 }
 .collapsible {
+  border-radius:20px;
+  border: .125rem solid white;
+  margin-top:1em;
+  margin-bottom:1em;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
   color: white;
   background-color: Transparent;
   cursor: pointer;
   padding: 10px;
-  width: 100%;
   border: none;
   text-align: center;
   outline: none;
@@ -57,6 +63,8 @@ body {
 }
 .active, .collapsible:hover {
   color:#990000;
+  background-color: white;
+  border: .125rem solid #990000;
 }
 .collapsible:after {
   content: '\25BC'; 
