@@ -1,5 +1,5 @@
 html {
-  background-color: #656565 !important;
+  background-color: #333333 !important;
   color: inherit;
 }
 
@@ -10,12 +10,12 @@ html {
 }
 
 #loupeContainer div.background {
-  background-color: #656565 !important;
+  background-color: #333333 !important;
   color: inherit;
 }
 
 header div.background {
-  background-color: #656565 !important;
+  background-color: #333333 !important;
   color: inherit;
 }
 
@@ -24,6 +24,6 @@ header div.background {
 }
 
 body {
-  background-color: #656565 !important;
+  background-color: #333333 !important;
   color: #FFFFFF !important;
 }
